@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//prova
 bool is_empt(int cursor)
 {
     if(cursor > 0)    return(false);
