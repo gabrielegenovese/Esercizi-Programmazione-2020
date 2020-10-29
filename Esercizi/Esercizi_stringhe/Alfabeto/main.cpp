@@ -33,13 +33,12 @@ int main()
 {
     srand(time(NULL));
     int length = 30, i = 0;
-    
+
     char A[length];
     init_str(A,init_len(length));
 
     char B[length];
     init_str(B,init_len(length));
-
 
     cout << "Ordine alfabetico: " << endl;
 

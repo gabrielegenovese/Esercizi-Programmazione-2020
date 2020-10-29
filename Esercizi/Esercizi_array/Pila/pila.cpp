@@ -1,14 +1,13 @@
 #include <iostream>
 using namespace std;
 
-//prova
 bool is_empt(int cursor)
 {
     if(cursor > 0)    return(false);
     else                return(true);
 }
 
-bool push(int* arr, int& cursor, int length, int n)
+bool push(int arr[], int& cursor, int length, int n)
 {
     if (cursor == length) return(false);
     else
@@ -19,7 +18,7 @@ bool push(int* arr, int& cursor, int length, int n)
     }
 }
 
-int pop(int* arr, int& cursor)
+int pop(int arr[], int& cursor)
 {   
     if (cursor > 0){
         cursor--;
@@ -29,7 +28,7 @@ int pop(int* arr, int& cursor)
     return(0);
 }
 
-void stampa(int* arr, int& cursor, int length)
+void stampa(int arr[], int cursor, int length)
 {
     cout << "Pila:\t";
 

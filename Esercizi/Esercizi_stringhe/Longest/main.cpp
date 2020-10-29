@@ -50,24 +50,10 @@ int main()
     cout << "Lungezza C: " << l_c << endl;
 
     if (l_a > l_b)
-    {
-        if (l_a > l_c)
-        {  
-            cout << "La stringa A è la più lunga";
-        }
-        else
-        { 
-            cout << "La stringa C è la più lunga";
-        }
-    }
-    else if (l_b > l_c)
-    {
-        cout << "La stringa B è la più lunga";
-    }
-    else
-    {
-        cout << "La stringa C è la più lunga";
-    }
+        if (l_a > l_c)  cout << "La stringa A è la più lunga";
+        else            cout << "La stringa C è la più lunga";
+    else if (l_b > l_c) cout << "La stringa B è la più lunga";
+    else                cout << "La stringa C è la più lunga";
 
     cout << endl;
 
