@@ -50,27 +50,24 @@ p_lista add_head(p_lista head, int val)
     return(tmp);
 }
 
-bool add_middle(p_lista head, int count, int val)
+void add_middle(p_lista head, int count, int val)
 {
     int c = 0;
     p_lista p = head, prec = head;
 
-    while (c != count && c < length)
+    while (c != count)
     {
         prec = p;
         p = p->next;
         c++;
     }
     
-    if (c == length) return(false);
-    else{
-        p_lista tmp = new lista;
-        tmp->val = val;
-        tmp->next = p;
-        prec->next = tmp;
-        length++;
-        return(true);
-    }
+    p_lista tmp = new lista;
+    tmp->val = val;
+    tmp->next = p;
+    prec->next = tmp;
+    length++;
+    
 }
 
 void add_last(p_lista head, int val)
@@ -84,17 +81,31 @@ void add_last(p_lista head, int val)
     length++;
 }
 
+p_lista add_elem(p_lista head, int pos, int val)
+{
+    if(pos == 0)
+        head = add_head(head, val);
+    else if(pos < length)
+        add_middle(head, pos, val);
+    else if (pos == length)
+        add_last(head, val);
+    else
+        cout << "Errore: posizione non valida";
+    
+    return(head);
+}   
+
 int main()
 {
     p_lista head1 = init_lista();
     stampa_lista(head1);
 
-    int pos = 4, val = 10;
-    if(!add_middle(head1, pos, val))
-        cout << "Errore: controllare la posizione selezionata\n(max numero che puoi inserire: " << length-1 << ")\n";
+    int pos, val;
+    cout << "Inserire la posizione da sostituire e poi il valore (0 per aggiungere in testa e 50 per la coda):\n";
+    cin >> pos;
+    cin >> val;
     
-    head1 = add_head(head1, 50);
-    add_last(head1, 500);
+    head1 = add_elem(head1, pos, val);
     stampa_lista(head1);
 
     return(0);
