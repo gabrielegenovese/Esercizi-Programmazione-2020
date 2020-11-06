@@ -101,7 +101,7 @@ int main()
     stampa_lista(head1);
 
     int pos, val;
-    cout << "Inserire la posizione da sostituire e poi il valore (0 per aggiungere in testa e 50 per la coda):\n";
+    cout << "Inserire la posizione da sostituire e poi il valore (0 per aggiungere in testa e " << length << " per la coda):\n";
     cin >> pos;
     cin >> val;
     
