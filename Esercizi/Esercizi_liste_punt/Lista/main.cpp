@@ -41,6 +41,7 @@ void stampa_lista(p_lista head)
     cout << endl;
 }
 
+// con lista di appoggio
 void print_reverse(p_lista head)
 {
     p_lista tmp = new lista;
@@ -58,6 +59,32 @@ void print_reverse(p_lista head)
 
     cout << "Stampa al contrario:" << endl;
     stampa_lista(tmp);
+}
+
+// senza lista di appoggio
+void print_reverse2(p_lista head)
+{
+    p_lista prec, tmp = head;
+    bool ciclo = true;
+
+    cout << "Print reverse" << endl;
+    while (ciclo)
+    {
+        prec = tmp;
+        tmp = tmp->next;
+        if (tmp->next == NULL)
+        {
+            cout << tmp->val << "\t";
+            tmp = head;
+            prec->next = NULL;
+            if (prec == head)
+            {
+                cout << prec->val << "\t";
+                ciclo = false;
+            }
+        }
+    }
+    cout << endl;
 }
 
 p_lista add_head(p_lista head, int val)
@@ -126,7 +153,7 @@ int main()
     
     head1 = add_elem(head1, pos, val);
     stampa_lista(head1);
-    print_reverse(head1);
+    print_reverse2(head1);
 
     return(0);
 }
