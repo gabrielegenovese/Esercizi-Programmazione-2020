@@ -41,6 +41,25 @@ void stampa_lista(p_lista head)
     cout << endl;
 }
 
+void print_reverse(p_lista head)
+{
+    p_lista tmp = new lista;
+    tmp->next = NULL;
+    tmp->val = head->val;
+
+    while(head->next != NULL)
+    {
+        head = head->next;
+        p_lista rev = new lista;
+        rev->next = tmp;
+        rev->val = head->val;
+        tmp = rev;
+    }
+
+    cout << "Stampa al contrario:" << endl;
+    stampa_lista(tmp);
+}
+
 p_lista add_head(p_lista head, int val)
 {
     p_lista tmp = new lista;
@@ -107,6 +126,7 @@ int main()
     
     head1 = add_elem(head1, pos, val);
     stampa_lista(head1);
+    print_reverse(head1);
 
     return(0);
 }
