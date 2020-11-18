@@ -9,11 +9,11 @@ namespace algebra
         if (n < 0) return(-1);
         else
         {
-            while (temp*temp < (n/2))
+            while (temp*temp < n)
             {
                 ++temp;
             }
-            return(--temp);
+            return(temp);
         }
     }
 
