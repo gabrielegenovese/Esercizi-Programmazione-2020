@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-//scrivere write_vertical in maniera che le cifre sono
-//stampate dalla meno significativa alla più significativa
+// scrivere write_vertical in maniera che le cifre sono
+// stampate dalla meno significativa alla più significativa
 
 // ricorsiva
 void r_write_vertical(int n)
@@ -31,5 +31,6 @@ int main()
     r_write_vertical(12300);
     cout << "-----" << endl;
     i_write_vertical(12301);
+    
     return(0);
 }
