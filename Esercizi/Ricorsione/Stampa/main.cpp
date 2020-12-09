@@ -17,13 +17,10 @@ void stampa_pari(int n)
 // iterativa
 void stampa_pari2(int n)
 {
-    if (n%2==1)
-        n--;
-
-    while (n > 0)
+    for (int i = n-1; i >= 0; i--)
     {
-        n -= 2;
-        if (n % 4 != 0) cout << n << endl;
+        if(i%2 == 0 && i%4 != 0)
+            cout << i << endl;
     }
 }
 
