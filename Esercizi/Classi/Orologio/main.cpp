@@ -81,10 +81,8 @@ int main()
         o.tick();
     }
 
-
     cout << "Secondi: " << o.seconds() << endl;
     
-
     OrologioConDoppioFormato t = OrologioConDoppioFormato();
     t.impostare(18,34,43);
     t.stampa24h();
