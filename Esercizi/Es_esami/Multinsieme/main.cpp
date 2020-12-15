@@ -146,6 +146,5 @@ int main()
     p.addPlus(12, 123);
     p.addPlus(15, 123);
     p.stampa_lista();
-
     return 0;
 }
