@@ -57,7 +57,7 @@ class PuntoRitiro
         }
         void removePacco(int n_ordine)
         {
-            p_pacco tmp = this->head, prec = tmp = this->head;
+            p_pacco tmp = this->head, prec = this->head;
             bool elim = false;
             if(this->head->n_ordine == n_ordine)
             {
