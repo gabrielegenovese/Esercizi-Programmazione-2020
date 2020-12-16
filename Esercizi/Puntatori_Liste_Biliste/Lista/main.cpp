@@ -38,7 +38,6 @@ void stampa_lista(p_lista head)
         cout << head->val << '\t';
         head = head->next;
     }
-
     cout << endl;
 }
 
