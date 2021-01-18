@@ -4,7 +4,7 @@ using namespace std;
 void f(int a[], const int l, int cursor, int i)
 {
     int tmp;
-    if(i == l-1){ }
+    if(i == l-1){ return; }
     if(a[i] % 2 == 0)
     {
         tmp = a[cursor];
